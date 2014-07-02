@@ -1,0 +1,4 @@
+splendour
+=========
+
+Swift syntactic sugar.

@@ -37,4 +37,8 @@ extension Int {
             fn(index: i)
         }
     }
+    
+    func divisible(other: Int) -> Bool {
+        return (self % other == 0)
+    }
 }

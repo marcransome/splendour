@@ -41,4 +41,12 @@ extension Int {
     func divisible(other: Int) -> Bool {
         return (self % other == 0)
     }
+    
+    var even: Bool {
+        return self % 2 == 0
+    }
+    
+    var odd: Bool {
+        return self % 2 != 0
+    }
 }

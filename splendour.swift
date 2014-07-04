@@ -50,3 +50,19 @@ extension Int {
         return self % 2 != 0
     }
 }
+
+@infix func * (left: Int, right: String) -> String {
+    var concatenation = ""
+    for _ in 0..left {
+        concatenation += right
+    }
+    return concatenation
+}
+
+@infix func * (left: String, right: Int) -> String {
+    var concatenation = ""
+    for _ in 0..right {
+        concatenation += left
+    }
+    return concatenation
+}

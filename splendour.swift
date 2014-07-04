@@ -22,6 +22,7 @@
  */
 
 import Darwin
+import Foundation
 
 extension Int {
     static func random(range: Range<Int>) -> Int {
@@ -65,4 +66,8 @@ extension Int {
         concatenation += left
     }
     return concatenation
+}
+
+@infix func / (left: String, right: String) -> String[] {
+    return left.componentsSeparatedByString(right)
 }

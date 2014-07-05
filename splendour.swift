@@ -49,9 +49,16 @@ extension Int {
         return numbers
     }
     
-    func upto(max: Int, repeat closure: (index: Int) -> ()) {
-        for i in self...max {
-            closure(index: i)
+    func to(var end: Int, repeat closure: (index: Int) -> ()) {
+        if (end > self) {
+            for i in self...end {
+                closure(index: i)
+            }
+        }
+        else {
+            for i in ReverseRange(range: end...self) {
+                closure(index: i)
+            }
         }
     }
     
@@ -95,5 +102,3 @@ extension Array {
 @infix func / (left: String, right: String) -> String[] {
     return left.componentsSeparatedByString(right)
 }
-
-

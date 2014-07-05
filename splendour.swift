@@ -33,7 +33,7 @@ extension Int {
         return Int.random(0...max)
     }
     
-    func upto(max: Int, fn: (index: Int) -> ()) {
+    func upto(max: Int, repeat: (index: Int) -> ()) {
         for i in self...max {
             fn(index: i)
         }

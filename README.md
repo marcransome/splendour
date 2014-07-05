@@ -97,7 +97,7 @@ Perform an operation for each value in an array by providing an inline closure t
 
 ```swift
 let numbers = [1, 2, 3]
-numbers.each(value in
+numbers.each({ value in
     println(value)
 })
 ```

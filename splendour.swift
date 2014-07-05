@@ -68,6 +68,14 @@ extension Int {
     }
 }
 
+extension Array {
+    func each(perform closure: (value: T) -> ()) {
+        for v in self {
+            closure(value: v)
+        }
+    }
+}
+
 @infix func * (left: Int, right: String) -> String {
     var concatenation = ""
     for _ in 0..left {
@@ -87,3 +95,5 @@ extension Int {
 @infix func / (left: String, right: String) -> String[] {
     return left.componentsSeparatedByString(right)
 }
+
+

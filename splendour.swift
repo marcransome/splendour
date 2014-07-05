@@ -39,7 +39,7 @@ extension Int {
         }
     }
     
-    func divisible(other: Int) -> Bool {
+    func divisibleBy(other: Int) -> Bool {
         return (self % other == 0)
     }
     

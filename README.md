@@ -34,3 +34,9 @@ Or specify a range:
 ```swift
 Int.random(10...20)			// => a random Int value between 10 and 20 inclusive
 ```
+
+## License
+`Splendour` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
+
+## Contact
+Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or tweet [@marcransome](http://www.twitter.com/marcransome).

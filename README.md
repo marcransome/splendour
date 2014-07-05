@@ -18,28 +18,34 @@ Concatenate a single string multiple times using the `*` infix operator:
 
 ### Integers
 
-Find out if an integer is divisible by another with no remainder:
+Find out if an integer literal or variable is divisible by another with no remainder:
 
 ```swift
-15.divisibleBy(3)		// => true
+15.divisibleBy(3)       // => true
+
+let choice = 4
+choice.divisibleBy(3)   // => false
 ```
 Check whether an integer is odd or even by accessing one of its `odd` or `even` properties:
 
 ```swift
-3.odd		// => true
-7.even		// => false
+3.odd             // => true
+7.even            // => false
+
+let diceRoll = 5
+diceRoll.odd      // => true
 ```
 
 Generate a random integer between 0 and another integer value:
 
 ```swift
-Int.random(100)				// => a random Int value between 0 and 100 inclusive
+Int.random(100)			// => a random Int value between 0 and 100 inclusive
 ```
 
 Or specify a range:
 
 ```swift
-Int.random(10...20)			// => a random Int value between 10 and 20 inclusive
+Int.random(10...20)		// => a random Int value between 10 and 20 inclusive
 ```
 
 ## License

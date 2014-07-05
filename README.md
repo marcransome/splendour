@@ -3,6 +3,13 @@ Syntactic sugar for Swift.
 
 ### Strings
 
+Divide a string into an array of substrings using a separator:
+
+```swift
+let input = "red,green,blue"
+let components = input / ","		// => ["red", "green", "blue"]
+```
+
 Concatenate a single string multiple times using the `*` infix operator:
 
 ```swift

@@ -33,6 +33,22 @@ extension Int {
         return Int.random(0...max)
     }
     
+    static func random(max: Int, count: Int) -> Int[] {
+        var numbers = Int[]()
+        for _ in 0..count {
+            numbers.append(Int.random(0...max))
+        }
+        return numbers
+    }
+    
+    static func random(range: Range<Int>, count: Int) -> Int[] {
+        var numbers = Int[]()
+        for _ in 0..count {
+            numbers.append(Int.random(range))
+        }
+        return numbers
+    }
+    
     func upto(max: Int, repeat closure: (index: Int) -> ()) {
         for i in self...max {
             closure(index: i)

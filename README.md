@@ -54,6 +54,43 @@ Need more than one random value? Specify a `count` argument:
 Int.random(10, count: 4)          // => [5, 2, 6, 1]
 Int.random(50...100, count: 2)    // => [72, 89]
 ```
+
+Repeat a block of code for each integer value between the receiver and an end value using an inline closure:
+
+```swift
+1.to(3, repeat: { number in
+    println(number)
+})
+```
+
+Prints:
+
+```
+1
+2
+3
+```
+
+Simplying things by using a trailing closure and shorthand argument syntax:
+
+```swift
+1.to(3) { println($0) }
+```
+
+You can even count in reverse:
+
+```swift
+3.to(1) { println($0) }
+```
+
+Prints:
+
+```
+3
+2
+1
+```
+
 ### Arrays
 
 Perform an operation for each value in an array by providing an inline closure to the `each` method:

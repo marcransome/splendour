@@ -36,7 +36,7 @@ let diceRoll = 5
 diceRoll.odd      // => true
 ```
 
-Generate a random integer between 0 and another integer value:
+Generate a random integer between 0 and 100 inclusive:
 
 ```swift
 Int.random(100)			// => 47

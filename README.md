@@ -3,7 +3,7 @@ Syntactic sugar for Swift.
 
 ### Strings
 
-Create an array of substrings by dividing a string with a separator:
+Divide a string into an array of substrings using a separator:
 
 ```swift
 let input = "red,green,blue"

@@ -71,7 +71,7 @@ Prints:
 3
 ```
 
-Simplying things by using a trailing closure and shorthand argument syntax:
+Simplify things by using a trailing closure and shorthand argument syntax:
 
 ```swift
 1.to(3) { println($0) }

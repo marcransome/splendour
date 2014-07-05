@@ -39,13 +39,13 @@ diceRoll.odd      // => true
 Generate a random integer between 0 and another integer value:
 
 ```swift
-Int.random(100)				// => a random Int value between 0 and 100 inclusive
+Int.random(100)			// => a random Int value between 0 and 100 inclusive
 ```
 
 Or specify a range:
 
 ```swift
-Int.random(10...20)			// => a random Int value between 10 and 20 inclusive
+Int.random(10...20)		// => a random Int value between 10 and 20 inclusive
 ```
 
 ## License

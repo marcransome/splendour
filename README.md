@@ -54,6 +54,24 @@ Need more than one random value? Specify a `count` argument:
 Int.random(10, count: 4)          // => [5, 2, 6, 1]
 Int.random(50...100, count: 2)    // => [72, 89]
 ```
+### Arrays
+
+Perform an operation for each value in an array using inline closure syntax:
+
+```swift
+let numbers = [1, 2, 3]
+numbers.each(value in
+  println(value)
+})
+```
+
+Then simplify things even further using a trailing closure and shorthand argument syntax:
+
+```swift
+let numbers = [1, 2, 3]
+numbers.each { println($0) }
+```
+
 
 ## License
 `Splendour` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).

@@ -65,13 +65,20 @@ numbers.each(value in
 })
 ```
 
-Then simplify things even further using a trailing closure and shorthand argument syntax:
+Which outputs:
+
+```swift
+1
+2
+3
+```
+
+Or simplify things even further using a trailing closure and shorthand argument syntax:
 
 ```swift
 let numbers = [1, 2, 3]
 numbers.each { println($0) }
 ```
-
 
 ## License
 `Splendour` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).

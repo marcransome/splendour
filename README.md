@@ -56,7 +56,7 @@ Int.random(50...100, count: 2)    // => [72, 89]
 ```
 ### Arrays
 
-Perform an operation for each value in an array using inline closure syntax:
+Perform an operation for each value in an array by providing an inline closure to the `each` method:
 
 ```swift
 let numbers = [1, 2, 3]

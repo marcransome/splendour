@@ -131,7 +131,7 @@ let numbers = [1, 2, 3, 4, 5, 6]
 let randomChoice = numbers.random(4)    // => [3, 5, 3, 1]
 ```
 
-Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array, if uniqueness isn't a concern.
+Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array.
 
 ## License
 `Splendour` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).

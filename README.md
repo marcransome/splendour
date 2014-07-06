@@ -1,5 +1,5 @@
 ## Splendour
-Syntactic sugar for Swift.
+Syntactic sugar for Swift:
 
 1. [Strings](#Strings)
 2. [Integers](#Integers)

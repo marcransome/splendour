@@ -1,6 +1,11 @@
 ## Splendour
 Syntactic sugar for Swift.
 
+1. [Strings](#Strings)
+2. [Integers](#Integers)
+3. [Arrays](#Arrays)
+
+<a name="Strings"/>
 ### Strings
 
 Divide a string into an array of substrings using a separator:
@@ -15,7 +20,7 @@ Concatenate a single string multiple times using the `*` infix operator:
 ```swift
 "hello" * 2		// => "hellohello"
 ```
-
+<a name="Integers"/>
 ### Integers
 
 Find out if an integer literal or variable is divisible by another with no remainder:
@@ -90,7 +95,7 @@ Prints:
 2
 1
 ```
-
+<a name="Arrays"/>
 ### Arrays
 
 Perform an operation for each value in an array by providing an inline closure to the `each` method:

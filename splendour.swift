@@ -81,6 +81,17 @@ extension Array {
             closure(value: v)
         }
     }
+    
+    func random(count: Int) -> T[] {
+        var randomElements = T[]()
+        var selfRange = 0...(self.count - 1)
+        
+        for _ in 0..count {
+            randomElements.append(self[Int.random(selfRange)])
+        }
+        
+        return randomElements
+    }
 }
 
 @infix func * (left: Int, right: String) -> String {

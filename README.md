@@ -133,6 +133,9 @@ let randomChoice = numbers.random(4)    // => [3, 5, 3, 1]
 
 Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array.
 
+## Contributing
+Send a pull request with your changes, including a brief description, and they will be considered for inclusion in Splendour.
+
 ## License
 `Splendour` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
 

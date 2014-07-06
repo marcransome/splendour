@@ -104,7 +104,7 @@ numbers.each({ value in
 
 Which outputs:
 
-```swift
+```
 1
 2
 3

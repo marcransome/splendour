@@ -53,7 +53,7 @@ Or specify a range:
 Int.random(10...20)		// => 14
 ```
 
-Need more than one random value? Specify a `count` argument:
+Need more than one random value? Specify a `count` value:
 
 ```swift
 Int.random(10, count: 4)          // => [5, 2, 6, 1]

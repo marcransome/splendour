@@ -49,15 +49,15 @@ extension Int {
         return numbers
     }
     
-    func to(var end: Int, repeat closure: (index: Int) -> ()) {
-        if (end > self) {
-            for i in self...end {
-                closure(index: i)
+    func to(max: Int, repeat: (index: Int) -> ()) {
+        if (max > self) {
+            for i in self...max {
+                repeat(index: i)
             }
         }
         else {
-            for i in ReverseRange(range: end...self) {
-                closure(index: i)
+            for i in ReverseRange(range: max...self) {
+                repeat(index: i)
             }
         }
     }
@@ -76,9 +76,9 @@ extension Int {
 }
 
 extension Array {
-    func each(perform closure: (value: T) -> ()) {
+    func each(repeat: (value: T) -> ()) {
         for v in self {
-            closure(value: v)
+            repeat(value: v)
         }
     }
     

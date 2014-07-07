@@ -137,7 +137,7 @@ Prints:
 <a name="ArraysEach"/>
 #### .each(repeat: (value: T) -> ())
 
-Perform an operation for each value in an array by providing an inline closure to the `each` method:
+Repeat a block of code for each value in an array value:
 
 ```swift
 let numbers = [1, 2, 3]
@@ -161,6 +161,7 @@ Or simplify things even further using a trailing closure and shorthand argument 
 let numbers = [1, 2, 3]
 numbers.each { println($0) }
 ```
+
 <a name="ArraysRandom"/>
 #### .random(count: Int)
 

@@ -3,7 +3,16 @@ Syntactic sugar for Swift:
 
 1. [Strings](#Strings)
 2. [Integers](#Integers)
+    * [.divisibleBy(other: Int)](#IntegersDivisibleBy)
+    * [.odd and .even](IntegersOddEven)
+    * [Int.random(max: Int) -> Int](#IntegersRandom)
+    * [Int.random(range: Range\<Int\>) -> Int](#IntegersRandomRange)
+    * [Int.random(max: Int, count: Int) -> Int\[\]](#IntegersRandomCount)
+    * [Int.random(range: Range<Int>, count: Int) -> Int\[\]](#IntegersRandomRangeCount)
+    * [to(max: Int, repeat: (index: Int) -> ())](#IntegersTo)
 3. [Arrays](#Arrays)
+    * [.each(repeat: (value: T) -> ())](#ArraysEach)
+    * [.random(count: Int)](#ArraysRandom)
 
 <a name="Strings"/>
 ### Strings
@@ -23,7 +32,10 @@ Concatenate a single string multiple times using the `*` infix operator:
 <a name="Integers"/>
 ### Integers
 
-Find out if an integer literal or variable is divisible by another with no remainder:
+<a name="IntegersDivisibleBy"/>
+#### .divisibleBy(other: Int)
+
+Find out if an integer is divisible by another with no remainder:
 
 ```swift
 15.divisibleBy(3)       // => true
@@ -31,6 +43,10 @@ Find out if an integer literal or variable is divisible by another with no remai
 let choice = 4
 choice.divisibleBy(3)   // => false
 ```
+
+<a name="IntegersOddEven"/>
+#### .odd and .even
+
 Check whether an integer is odd or even by accessing one of its `odd` or `even` properties:
 
 ```swift
@@ -41,26 +57,46 @@ let diceRoll = 5
 diceRoll.odd      // => true
 ```
 
-Generate a random integer between 0 and 100 inclusive:
+<a name="IntegersRandom"/>
+#### Int.random(max: Int) -> Int
+
+Generate a random integer between zero and the specified maximum:
 
 ```swift
 Int.random(100)			// => 47
 ```
 
-Or specify a range:
+<a name="IntegersRandomRange">
+#### Int.random(range: Range\<Int\>) -> Int
+
+Generate a random integer within a specified range:
 
 ```swift
 Int.random(10...20)		// => 14
 ```
 
-Need more than one random value? Specify a `count` value:
+<a name="IntegersRandomCount"/>
+#### Int.random(max: Int, count: Int) -> Int\[\]
+
+Create an array of random integers with values between zero and the specified maximum:
 
 ```swift
 Int.random(10, count: 4)          // => [5, 2, 6, 1]
-Int.random(50...100, count: 2)    // => [72, 89]
 ```
 
-Repeat a block of code for each integer value between the receiver and an end value using an inline closure:
+<a name="IntegersRandomRangeCount"/>
+#### Int.random(range: Range<Int>, count: Int) -> Int\[\]
+
+Create an array of random integers with values in the given range:
+
+```swift
+Int.random(50...100, count: 3)    // => [72, 89, 4]
+```
+
+<a name="IntegersTo"/>
+#### .to(max: Int, repeat: (index: Int) -> ())
+
+Repeats a block of code for each integer value between the receiver and the specified maximum:
 
 ```swift
 1.to(3, repeat: { number in
@@ -98,6 +134,9 @@ Prints:
 <a name="Arrays"/>
 ### Arrays
 
+<a name="ArraysEach"/>
+#### .each(repeat: (value: T) -> ())
+
 Perform an operation for each value in an array by providing an inline closure to the `each` method:
 
 ```swift
@@ -122,6 +161,8 @@ Or simplify things even further using a trailing closure and shorthand argument 
 let numbers = [1, 2, 3]
 numbers.each { println($0) }
 ```
+<a name="ArraysRandom"/>
+#### .random(count: Int)
 
 Select random elements from an array using the `random` method:
 

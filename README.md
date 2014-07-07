@@ -9,7 +9,7 @@ Syntactic sugar for Swift:
     * [Int.random(range: Range\<Int\>) -> Int](#IntegersRandomRange)
     * [Int.random(max: Int, count: Int) -> Int\[\]](#IntegersRandomCount)
     * [Int.random(range: Range<Int>, count: Int) -> Int\[\]](#IntegersRandomRangeCount)
-    * [to(max: Int, repeat: (index: Int) -> ())](#IntegersTo)
+    * [.to(max: Int, repeat: (index: Int) -> ())](#IntegersTo)
 3. [Arrays](#Arrays)
     * [.each(repeat: (value: T) -> ())](#ArraysEach)
     * [.random(count: Int)](#ArraysRandom)

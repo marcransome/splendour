@@ -96,7 +96,7 @@ Int.random(50...100, count: 3)    // => [72, 89, 4]
 <a name="IntegersTo"/>
 #### .to(max: Int, repeat: (index: Int) -> ())
 
-Repeats a block of code for each integer value between the receiver and the specified maximum:
+Repeat a block of code for each integer value between the receiver and the specified maximum:
 
 ```swift
 1.to(3, repeat: { number in

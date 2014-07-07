@@ -4,7 +4,7 @@ Syntactic sugar for Swift:
 1. [Strings](#Strings)
 2. [Integers](#Integers)
     * [.divisibleBy(other: Int)](#IntegersDivisibleBy)
-    * [.odd and .even](IntegersOddEven)
+    * [.odd and .even](#IntegersOddEven)
     * [Int.random(max: Int) -> Int](#IntegersRandom)
     * [Int.random(range: Range\<Int\>) -> Int](#IntegersRandomRange)
     * [Int.random(max: Int, count: Int) -> Int\[\]](#IntegersRandomCount)

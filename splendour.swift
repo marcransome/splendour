@@ -92,6 +92,41 @@ extension Array {
         
         return randomElements
     }
+    
+    func random(count: Int, unique: Bool) -> T[] {
+        
+        var randomElements = T[]()
+        var remainingIndices = Int[]()
+        
+        var selfRange = 0..self.endIndex
+        
+        for i in selfRange {
+            remainingIndices.append(i)
+        }
+        
+        if unique {
+            for _ in 0..count {
+                
+                if remainingIndices.count == 0 {
+                    break
+                }
+                
+                let rangeOfIndices = 0..remainingIndices.endIndex
+                let randomIndex = Int.random(rangeOfIndices)
+                let randomValue = remainingIndices[randomIndex]
+                
+                randomElements.append(self[randomValue])
+                remainingIndices.removeAtIndex(randomIndex)
+            }
+        }
+        else {
+            for _ in 0..count {
+                randomElements.append(self[Int.random(selfRange)])
+            }
+        }
+        
+        return randomElements
+    }
 }
 
 @infix func * (left: Int, right: String) -> String {

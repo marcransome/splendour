@@ -90,7 +90,7 @@ Int.random(10, count: 4)          // => [5, 2, 6, 1]
 Create an array of random integers with values in the given range:
 
 ```swift
-Int.random(50...100, count: 3)    // => [72, 89, 4]
+Int.random(50...100, count: 3)    // => [72, 89, 53]
 ```
 
 <a name="IntegersTo"/>

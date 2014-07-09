@@ -175,6 +175,20 @@ let randomChoice = numbers.random(4)    // => [3, 5, 3, 1]
 
 Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array.
 
+#### random(count: Int, unique: Bool) -> T\[\]
+
+Unlike the `.random(count: Int)` method which returns an array of random elements that may contain duplicate values, this method allows you specify whether elements should be unique or not.
+
+When requesting unique elements, the returned array will be no greater in size than the total number of elements of the receiver. When specifying non-unique elements the functionality will be identical to that of the `.random(count: Int)` method:
+
+```swift
+["north", "east", "south", "west"].random(2, unique: true)     // => ["east", "north"]
+["north", "east", "south", "west"].random(5, unique: true)     // => ["west", "north", "east", "south"]
+
+["north", "east", "south", "west"].random(3, unique: false)    // => ["south", "north", "south"]
+["north", "east", "south", "west"].random(5, unique: false)    // => ["west", "north", "east", "north", "west"]
+```
+
 ## Contributing
 Send a pull request with your changes, including a brief description, and they will be considered for inclusion in Splendour.
 

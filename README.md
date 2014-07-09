@@ -13,6 +13,7 @@ Syntactic sugar for Swift:
 3. [Arrays](#Arrays)
     * [.each(repeat: (value: T) -> ())](#ArraysEach)
     * [.random(count: Int)](#ArraysRandom)
+    * [.random(count: Int, unique: Bool) -> T\[\]](#ArraysRandomUnique)
 
 <a name="Strings"/>
 ### Strings
@@ -175,7 +176,8 @@ let randomChoice = numbers.random(4)    // => [3, 5, 3, 1]
 
 Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array.
 
-#### random(count: Int, unique: Bool) -> T\[\]
+<a name="ArraysRandomUnique"/>
+#### .random(count: Int, unique: Bool) -> T\[\]
 
 Unlike the `.random(count: Int)` method which returns an array of random elements that may contain duplicate values, this method allows you specify whether elements should be unique or not.
 

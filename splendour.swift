@@ -140,11 +140,7 @@ extension Array {
 }
 
 @infix func * (left: String, right: Int) -> String {
-    var concatenation = ""
-    for _ in 0..<right {
-        concatenation += left
-    }
-    return concatenation
+    return right * left
 }
 
 @infix func / (left: String, right: String) -> [String] {

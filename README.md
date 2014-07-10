@@ -9,6 +9,7 @@ Syntactic sugar for Swift:
     * [Int.random(range: Range\<Int\>) -> Int](#IntegersRandomRange)
     * [Int.random(max: Int, count: Int) -> \[Int\]](#IntegersRandomCount)
     * [Int.random(range: Range<Int>, count: Int) -> \[Int\]](#IntegersRandomRangeCount)
+    * [Int.series(range: Range<Int>) -> \[Int\]](#IntegersSeries)
     * [.to(max: Int, repeat: (index: Int) -> ())](#IntegersTo)
 3. [Arrays](#Arrays)
     * [.each(repeat: (value: T) -> ())](#ArraysEach)
@@ -92,6 +93,15 @@ Create an array of random integers with values in the given range:
 
 ```swift
 Int.random(50...100, count: 3)    // => [72, 89, 53]
+```
+
+<a name="IntegersSeries"/>
+#### Int.series(range: Range<Int>) -> \[Int\]
+
+Returns an array of integers for the given range.
+
+```swift
+Int.series(0...5)      // => [0, 1, 2, 3, 4, 5]
 ```
 
 <a name="IntegersTo"/>

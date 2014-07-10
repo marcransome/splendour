@@ -102,16 +102,10 @@ extension Array {
     }
 
     func random(count: Int, unique: Bool) -> [T] {
-
+        let selfRange = 0..<self.endIndex
+        var remainingIndices = Int.series(selfRange)
         var randomElements = [T]()
-        var remainingIndices = [Int]()
-
-        var selfRange = 0..<self.endIndex
-
-        for i in selfRange {
-            remainingIndices.append(i)
-        }
-
+        
         if unique {
             for _ in 0..<count {
 

@@ -35,7 +35,7 @@ extension Int {
     
     static func random(max: Int, count: Int) -> Int[] {
         var numbers = Int[]()
-        for _ in 0..count {
+        for _ in 0..<count {
             numbers.append(Int.random(0...max))
         }
         return numbers
@@ -43,7 +43,7 @@ extension Int {
     
     static func random(range: Range<Int>, count: Int) -> Int[] {
         var numbers = Int[]()
-        for _ in 0..count {
+        for _ in 0..<count {
             numbers.append(Int.random(range))
         }
         return numbers
@@ -86,7 +86,7 @@ extension Array {
         var randomElements = T[]()
         var selfRange = 0...(self.count - 1)
         
-        for _ in 0..count {
+        for _ in 0..<count {
             randomElements.append(self[Int.random(selfRange)])
         }
         
@@ -98,20 +98,20 @@ extension Array {
         var randomElements = T[]()
         var remainingIndices = Int[]()
         
-        var selfRange = 0..self.endIndex
+        var selfRange = 0..<self.endIndex
         
         for i in selfRange {
             remainingIndices.append(i)
         }
         
         if unique {
-            for _ in 0..count {
+            for _ in 0..<count {
                 
                 if remainingIndices.count == 0 {
                     break
                 }
                 
-                let rangeOfIndices = 0..remainingIndices.endIndex
+                let rangeOfIndices = 0..<remainingIndices.endIndex
                 let randomIndex = Int.random(rangeOfIndices)
                 let randomValue = remainingIndices[randomIndex]
                 
@@ -120,7 +120,7 @@ extension Array {
             }
         }
         else {
-            for _ in 0..count {
+            for _ in 0..<count {
                 randomElements.append(self[Int.random(selfRange)])
             }
         }
@@ -131,7 +131,7 @@ extension Array {
 
 @infix func * (left: Int, right: String) -> String {
     var concatenation = ""
-    for _ in 0..left {
+    for _ in 0..<left {
         concatenation += right
     }
     return concatenation
@@ -139,7 +139,7 @@ extension Array {
 
 @infix func * (left: String, right: Int) -> String {
     var concatenation = ""
-    for _ in 0..right {
+    for _ in 0..<right {
         concatenation += left
     }
     return concatenation

@@ -7,13 +7,13 @@ Syntactic sugar for Swift:
     * [.odd and .even](#IntegersOddEven)
     * [Int.random(max: Int) -> Int](#IntegersRandom)
     * [Int.random(range: Range\<Int\>) -> Int](#IntegersRandomRange)
-    * [Int.random(max: Int, count: Int) -> Int\[\]](#IntegersRandomCount)
-    * [Int.random(range: Range<Int>, count: Int) -> Int\[\]](#IntegersRandomRangeCount)
+    * [Int.random(max: Int, count: Int) -> \[Int\]](#IntegersRandomCount)
+    * [Int.random(range: Range<Int>, count: Int) -> \[Int\]](#IntegersRandomRangeCount)
     * [.to(max: Int, repeat: (index: Int) -> ())](#IntegersTo)
 3. [Arrays](#Arrays)
     * [.each(repeat: (value: T) -> ())](#ArraysEach)
     * [.random(count: Int)](#ArraysRandom)
-    * [.random(count: Int, unique: Bool) -> T\[\]](#ArraysRandomUnique)
+    * [.random(count: Int, unique: Bool) -> \[T\]](#ArraysRandomUnique)
 
 <a name="Strings"/>
 ### Strings
@@ -77,7 +77,7 @@ Int.random(10...20)		// => 14
 ```
 
 <a name="IntegersRandomCount"/>
-#### Int.random(max: Int, count: Int) -> Int\[\]
+#### Int.random(max: Int, count: Int) -> \[Int\]
 
 Create an array of random integers with values between zero and the specified maximum:
 
@@ -86,7 +86,7 @@ Int.random(10, count: 4)          // => [5, 2, 6, 1]
 ```
 
 <a name="IntegersRandomRangeCount"/>
-#### Int.random(range: Range<Int>, count: Int) -> Int\[\]
+#### Int.random(range: Range<Int>, count: Int) -> \[Int\]
 
 Create an array of random integers with values in the given range:
 
@@ -177,7 +177,7 @@ let randomChoice = numbers.random(4)    // => [3, 5, 3, 1]
 Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array.
 
 <a name="ArraysRandomUnique"/>
-#### .random(count: Int, unique: Bool) -> T\[\]
+#### .random(count: Int, unique: Bool) -> \[T\]
 
 Unlike the `.random(count: Int)` method which returns an array of random elements that may contain duplicate values, this method allows you specify whether elements should be unique or not.
 

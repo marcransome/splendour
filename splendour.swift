@@ -49,6 +49,14 @@ extension Int {
         return numbers
     }
 
+    static func series(range: Range<Int>) -> [Int] {
+        var numbers: [Int] = []
+        for i in range {
+            numbers += i
+        }
+        return numbers;
+    }
+    
     func to(max: Int, repeat: (index: Int) -> ()) {
         if (max > self) {
             for i in self...max {

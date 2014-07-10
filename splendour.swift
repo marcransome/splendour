@@ -1,7 +1,7 @@
 /* The MIT License (MIT)
  *
  * Copyright (c) 2014 Marc Ransome
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -32,23 +32,23 @@ extension Int {
     static func random(max: Int) -> Int {
         return Int.random(0...max)
     }
-    
-    static func random(max: Int, count: Int) -> Int[] {
-        var numbers = Int[]()
-        for _ in 0..count {
+
+    static func random(max: Int, count: Int) -> [Int] {
+        var numbers = [Int]()
+        for _ in 0..<count {
             numbers.append(Int.random(0...max))
         }
         return numbers
     }
-    
-    static func random(range: Range<Int>, count: Int) -> Int[] {
-        var numbers = Int[]()
-        for _ in 0..count {
+
+    static func random(range: Range<Int>, count: Int) -> [Int] {
+        var numbers = [Int]()
+        for _ in 0..<count {
             numbers.append(Int.random(range))
         }
         return numbers
     }
-    
+
     func to(max: Int, repeat: (index: Int) -> ()) {
         if (max > self) {
             for i in self...max {
@@ -61,17 +61,17 @@ extension Int {
             }
         }
     }
-    
+
     func divisibleBy(other: Int) -> Bool {
         return (self % other == 0)
     }
-    
+
     var even: Bool {
-        return self % 2 == 0
+    return self % 2 == 0
     }
-    
+
     var odd: Bool {
-        return self % 2 != 0
+    return self % 2 != 0
     }
 }
 
@@ -81,57 +81,57 @@ extension Array {
             repeat(value: v)
         }
     }
-    
-    func random(count: Int) -> T[] {
-        var randomElements = T[]()
+
+    func random(count: Int) -> [T] {
+        var randomElements = [T]()
         var selfRange = 0...(self.count - 1)
-        
-        for _ in 0..count {
+
+        for _ in 0..<count {
             randomElements.append(self[Int.random(selfRange)])
         }
-        
+
         return randomElements
     }
-    
-    func random(count: Int, unique: Bool) -> T[] {
-        
-        var randomElements = T[]()
-        var remainingIndices = Int[]()
-        
-        var selfRange = 0..self.endIndex
-        
+
+    func random(count: Int, unique: Bool) -> [T] {
+
+        var randomElements = [T]()
+        var remainingIndices = [Int]()
+
+        var selfRange = 0..<self.endIndex
+
         for i in selfRange {
             remainingIndices.append(i)
         }
-        
+
         if unique {
-            for _ in 0..count {
-                
+            for _ in 0..<count {
+
                 if remainingIndices.count == 0 {
                     break
                 }
-                
-                let rangeOfIndices = 0..remainingIndices.endIndex
+
+                let rangeOfIndices = 0..<remainingIndices.endIndex
                 let randomIndex = Int.random(rangeOfIndices)
                 let randomValue = remainingIndices[randomIndex]
-                
+
                 randomElements.append(self[randomValue])
                 remainingIndices.removeAtIndex(randomIndex)
             }
         }
         else {
-            for _ in 0..count {
+            for _ in 0..<count {
                 randomElements.append(self[Int.random(selfRange)])
             }
         }
-        
+
         return randomElements
     }
 }
 
 @infix func * (left: Int, right: String) -> String {
     var concatenation = ""
-    for _ in 0..left {
+    for _ in 0..<left {
         concatenation += right
     }
     return concatenation
@@ -139,12 +139,12 @@ extension Array {
 
 @infix func * (left: String, right: Int) -> String {
     var concatenation = ""
-    for _ in 0..right {
+    for _ in 0..<right {
         concatenation += left
     }
     return concatenation
 }
 
-@infix func / (left: String, right: String) -> String[] {
+@infix func / (left: String, right: String) -> [String] {
     return left.componentsSeparatedByString(right)
 }

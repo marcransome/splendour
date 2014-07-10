@@ -54,7 +54,7 @@ extension Int {
         for i in range {
             numbers += i
         }
-        return numbers;
+        return numbers
     }
     
     func to(max: Int, repeat: (index: Int) -> ()) {

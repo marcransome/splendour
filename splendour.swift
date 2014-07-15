@@ -75,11 +75,11 @@ extension Int {
     }
 
     var even: Bool {
-    return self % 2 == 0
+        return self % 2 == 0
     }
 
     var odd: Bool {
-    return self % 2 != 0
+        return self % 2 != 0
     }
 }
 

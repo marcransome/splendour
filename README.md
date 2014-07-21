@@ -8,8 +8,8 @@ Syntactic sugar for Swift:
     * [Int.random(max: Int) -> Int](#IntegersRandom)
     * [Int.random(range: Range\<Int\>) -> Int](#IntegersRandomRange)
     * [Int.random(max: Int, count: Int) -> \[Int\]](#IntegersRandomCount)
-    * [Int.random(range: Range<Int>, count: Int) -> \[Int\]](#IntegersRandomRangeCount)
-    * [Int.series(range: Range<Int>) -> \[Int\]](#IntegersSeries)
+    * [Int.random(range: Range\<Int\>, count: Int) -> \[Int\]](#IntegersRandomRangeCount)
+    * [Int.series(range: Range\<Int\>) -> \[Int\]](#IntegersSeries)
     * [.to(max: Int, repeat: (index: Int) -> ())](#IntegersTo)
 3. [Arrays](#Arrays)
     * [.each(repeat: (value: T) -> ())](#ArraysEach)
@@ -87,7 +87,7 @@ Int.random(10, count: 4)          // => [5, 2, 6, 1]
 ```
 
 <a name="IntegersRandomRangeCount"/>
-#### Int.random(range: Range<Int>, count: Int) -> \[Int\]
+#### Int.random(range: Range\<Int\>, count: Int) -> \[Int\]
 
 Create an array of random integers with values in the given range:
 
@@ -96,7 +96,7 @@ Int.random(50...100, count: 3)    // => [72, 89, 53]
 ```
 
 <a name="IntegersSeries"/>
-#### Int.series(range: Range<Int>) -> \[Int\]
+#### Int.series(range: Range\<Int\>) -> \[Int\]
 
 Returns an array of integers for the given range.
 

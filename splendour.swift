@@ -131,7 +131,7 @@ extension Array {
     }
 }
 
-@infix func * (left: Int, right: String) -> String {
+func * (left: Int, right: String) -> String {
     var concatenation = ""
     for _ in 0..<left {
         concatenation += right
@@ -139,10 +139,10 @@ extension Array {
     return concatenation
 }
 
-@infix func * (left: String, right: Int) -> String {
+func * (left: String, right: Int) -> String {
     return right * left
 }
 
-@infix func / (left: String, right: String) -> [String] {
+func / (left: String, right: String) -> [String] {
     return left.componentsSeparatedByString(right)
 }

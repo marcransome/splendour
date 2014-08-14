@@ -52,7 +52,7 @@ extension Int {
     static func series(range: Range<Int>) -> [Int] {
         var numbers: [Int] = []
         for i in range {
-            numbers += i
+            numbers.append(i)
         }
         return numbers
     }

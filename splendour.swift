@@ -64,7 +64,7 @@ extension Int {
             }
         }
         else {
-            for i in ReverseRange(range: max...self) {
+            for i in reverse(max...self) {
                 repeat(index: i)
             }
         }

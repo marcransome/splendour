@@ -1,4 +1,4 @@
-<img src="https://www.fidgetbox.co.uk/github/wand.png" alt="Magic wand" width="120" height="109">
+<img src="https://www.fidgetbox.co.uk/github/wand.png" alt="Magic wand" width="120" height="91">
 
 ## Splendour
 Syntactic sugar for Swift:

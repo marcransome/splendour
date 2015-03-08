@@ -209,5 +209,8 @@ Send a pull request with your changes, including a brief description, and they w
 ## License
 `Splendour` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
 
+## Acknowledgements
+[Magic Wand](http://thenounproject.com/term/magic-wand/78861/) icon by [SuperAtic LABS](http://thenounproject.com/SuperAtic/) from The Noun Project.
+
 ## Contact
 Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or tweet [@marcransome](http://www.twitter.com/marcransome).

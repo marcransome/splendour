@@ -150,7 +150,7 @@ Prints:
 <a name="ArraysEach"/>
 #### .each(repeat: (value: T) -> ())
 
-Repeat a block of code for each value in an array value:
+Repeat a block of code for each value in an array:
 
 ```swift
 let numbers = [1, 2, 3]

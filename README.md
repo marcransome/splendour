@@ -19,6 +19,7 @@ Syntactic sugar for Swift:
     * [.random(count: Int, unique: Bool) -> \[T\]](#ArraysRandomUnique)
 
 <a name="Strings"/>
+
 ### Strings
 
 Divide a string into an array of substrings using a separator:
@@ -34,9 +35,11 @@ Concatenate a single string multiple times using the `*` infix operator:
 "hello" * 2		// => "hellohello"
 ```
 <a name="Integers"/>
+
 ### Integers
 
 <a name="IntegersDivisibleBy"/>
+
 #### .divisibleBy(other: Int)
 
 Find out if an integer is divisible by another with no remainder:
@@ -49,6 +52,7 @@ choice.divisibleBy(3)   // => false
 ```
 
 <a name="IntegersOddEven"/>
+
 #### .odd and .even
 
 Check whether an integer is odd or even by accessing one of its `odd` or `even` properties:
@@ -62,6 +66,7 @@ diceRoll.odd      // => true
 ```
 
 <a name="IntegersRandom"/>
+
 #### Int.random(max: Int) -> Int
 
 Generate a random integer between zero and the specified maximum:
@@ -71,6 +76,7 @@ Int.random(100)			// => 47
 ```
 
 <a name="IntegersRandomRange">
+   
 #### Int.random(range: Range\<Int\>) -> Int
 
 Generate a random integer within a specified range:
@@ -80,6 +86,7 @@ Int.random(10...20)		// => 14
 ```
 
 <a name="IntegersRandomCount"/>
+
 #### Int.random(max: Int, count: Int) -> \[Int\]
 
 Create an array of random integers with values between zero and the specified maximum:
@@ -89,6 +96,7 @@ Int.random(10, count: 4)          // => [5, 2, 6, 1]
 ```
 
 <a name="IntegersRandomRangeCount"/>
+
 #### Int.random(range: Range\<Int\>, count: Int) -> \[Int\]
 
 Create an array of random integers with values in the given range:
@@ -98,6 +106,7 @@ Int.random(50...100, count: 3)    // => [72, 89, 53]
 ```
 
 <a name="IntegersSeries"/>
+
 #### Int.series(range: Range\<Int\>) -> \[Int\]
 
 Returns an array of integers for the given range.
@@ -107,6 +116,7 @@ Int.series(0...5)      // => [0, 1, 2, 3, 4, 5]
 ```
 
 <a name="IntegersTo"/>
+
 #### .to(max: Int, repeat: (index: Int) -> ())
 
 Repeat a block of code for each integer value between the receiver and the specified maximum:
@@ -145,9 +155,11 @@ Prints:
 1
 ```
 <a name="Arrays"/>
+
 ### Arrays
 
 <a name="ArraysEach"/>
+
 #### .each(repeat: (value: T) -> ())
 
 Repeat a block of code for each value in an array:
@@ -176,6 +188,7 @@ numbers.each { println($0) }
 ```
 
 <a name="ArraysRandom"/>
+
 #### .random(count: Int)
 
 Select random elements from an array using the `random` method:
@@ -189,6 +202,7 @@ let randomChoice = numbers.random(4)    // => [3, 5, 3, 1]
 Caveat: random array elements aren't uniqued, meaning you may receive duplicate values (as shown above). This also means you can request a number of random elements that exceeds the total number of elements in the array.
 
 <a name="ArraysRandomUnique"/>
+
 #### .random(count: Int, unique: Bool) -> \[T\]
 
 Unlike the `.random(count: Int)` method which returns an array of random elements that may contain duplicate values, this method allows you specify whether elements should be unique or not.

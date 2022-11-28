@@ -227,4 +227,4 @@ Send a pull request with your changes, including a brief description, and they w
 [Magic Wand](http://thenounproject.com/term/magic-wand/78861/) icon by [SuperAtic LABS](http://thenounproject.com/SuperAtic/) from The Noun Project.
 
 ## Contact
-Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or tweet [@marcransome](http://www.twitter.com/marcransome).
+Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or [create an issue](https://github.com/marcransome/splendour/issues).
